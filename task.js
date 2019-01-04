@@ -20,7 +20,9 @@ function updatePost() {
 function update() {
     if (updatePost() || updateHexo()) {
         shell.cd('/hexo/')
-        shell.exec('npm run update')
+        shell.exec('node_modules/hexo/bin/hexo clean')
+        shell.exec('node_modules/hexo/bin/hexo d -g')
+        shell.exec('node_modules/hexo/bin/hexo gulp')
     }
 }
 
