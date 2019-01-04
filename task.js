@@ -5,6 +5,7 @@ function updateHexo() {
     // shell.exec('git checkout .')
     var stdout = shell.exec('git pull').stdout
     if (stdout == 'Already up to date.\n') { return false }
+    console.log(stdout)
     return true
 }
 
@@ -13,6 +14,7 @@ function updatePost() {
     // shell.exec('git checkout .')
     var stdout = shell.exec('git pull').stdout
     if (stdout == 'Already up to date.\n') { return false }
+    console.log(stdout)
     return true
 }
 
