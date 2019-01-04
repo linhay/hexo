@@ -16,13 +16,11 @@ function updatePost() {
     return true
 }
 
-
 function update() {
     if (updatePost() || updateHexo()) {
         shell.cd('/hexo/')
         shell.exec('/usr/local/bin/hexo clean')
         shell.exec('/usr/local/bin/hexo d -g')
-        shell.exec('/usr/local/bin/hexo gulp')
     }
 }
 
