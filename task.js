@@ -28,4 +28,5 @@ function update() {
 
 setInterval(() => {
     update()
+    shell.exit(0)
 }, 5000)
